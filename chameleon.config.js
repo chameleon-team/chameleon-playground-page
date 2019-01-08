@@ -1,6 +1,6 @@
 
 // 设置静态资源的线上路径
-const publicPath = 'http://10.179.100.193';
+const publicPath = 'https://static.didialift.com/pinche/gift/cml-playground';
 // 设置api请求前缀
 const apiPrefix = 'https://api.chameleon.com';
 
@@ -27,7 +27,7 @@ cml.config.merge({
     },
     build: {
       analysis: false,
-      publicPath: `${publicPath}/`,
+      publicPath: `${publicPath}/web/`,
       apiPrefix
     }
   },
@@ -35,12 +35,12 @@ cml.config.merge({
     dev: {
     },
     build: {
-      publicPath: `${publicPath}/`,
+      publicPath: `${publicPath}/weex/`,
       hash: false,
       apiPrefix
     },
     custom: {
-      publicPath: `${publicPath}/wx`,
+      publicPath: `${publicPath}/wx/`,
       apiPrefix
     }
   }
