@@ -1,0 +1,162 @@
+<template>
+  <view class="page-container">
+    <scroller>
+      <view class="scroller-wrap">
+        <image src="{{chameleonSrc}}" class="logo"/>
+        <image src="{{titleSrc}}" class="title"/>
+        <button
+          class="scan-btn"
+          type="blue"
+          text="扫描二维码"
+          c-bind:onclick="scan"
+          btn-style="background: #1D6EF0;box-shadow: 0 4px 16px 0 rgba(0,0,0,0.12);font-family: PingFangSC-Medium;font-size: 32px;color: #FFFFFF;text-align: center;width: 560px;border-radius: 50px;"
+        >
+        </button>
+        <view class="tool-list">
+          <view class="tool-item" c-bind:tap="help">
+            <image src="{{iconHelp}}" class="tool-icon"/>
+            <text  class="tool-title">帮助文档</text>
+          </view>
+          <view class="tool-item"  c-bind:tap="uidoc">
+            <image src="{{iconModule}}" class="tool-icon"/>
+            <text class="tool-title">UI组件</text>
+          </view>
+        </view>
+        <text  class="bottom-desc">适应不同环境的跨端整体解决方案</text>
+      </view>
+    </scroller>
+  </view>
+</template>
+
+<script>
+import utils from '../../components/utils.interface';
+class Index  {
+  data = {
+    title: "chameleon",
+    chameleonSrc: require('../../assets/images/chameleon.png'),
+    titleSrc: require('../../assets/images/label.png'),
+    iconHelp: require('../../assets/images/help.png'),
+    iconModule: require('../../assets/images/module.png'),
+  }
+  computed ={
+    
+  }
+  watch = {
+
+  }
+  methods = {
+    scan() {
+      utils.openUrl('weex://go/scan');
+    },
+    help() {
+      utils.openUrl('http://docs.didialift.com/chameleon/');
+    },
+    uidoc() {
+      utils.openUrl('http://www.didiglobal.com?cml_addr=https://static.didialift.com/pinche/gift/chameleon-ui/weex/chameleon-ui_1dbbe9f5394d7c61d6f7.js');
+    }
+  }
+  beforeCreate(res) {
+  }
+  created(res) {
+    // hide title bar
+    try {
+      var titleBar = weex.requireModule('titleBar');
+      titleBar.showTitleBar(false);
+    } catch (e) {}
+  }
+  beforeMount(res) {
+  }
+  mounted(res) {
+  }
+  beforeDestroy(res) {
+  }
+  destroyed(res) {
+  }
+
+}
+
+export default new Index();
+
+</script>
+<style scoped>
+.logo{
+  margin-top: 255px;
+  width: 210px;
+  height: 210px;
+}
+.title{
+  width: 240px;
+  height: 50px;
+  margin-top: 36px;
+}
+.tool-list{
+  position: fixed;
+  bottom: 200px;
+  width: 750px;
+  justify-content: space-around;
+}
+.tool-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tool-icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 20px;
+}
+.bottom-desc {
+  position: fixed;
+  bottom: 40px;
+  font-family: PingFangSC-Regular;
+  font-size: 24px;
+  color: #A2ACC1;
+  letter-spacing: 0;
+  width: 750px;
+  text-align: center;
+}
+.tool-title {
+  font-family: PingFangSC-Medium;
+  font-size: 28px;
+  color: #172742;
+  text-align: center;
+}
+.scan-btn {
+  margin-top: 100px;
+}
+.page-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.tool-list {
+  display: flex;
+  flex-direction: row;
+
+}
+.scroller-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 1300px;
+}
+.main {
+  width: 600px;
+}
+</style>
+<script cml-type="json">
+{
+  "base": {
+    "usingComponents": {
+      "demo-com": "/components/demo-com/demo-com"
+    }
+  },
+  "wx": {
+    "navigationBarTitleText": "index",
+    "backgroundTextStyle": "dark",
+    "backgroundColor": "#E2E2E2"
+  }
+}
+</script>

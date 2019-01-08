@@ -1,0 +1,11 @@
+output/
+target/
+.DS_Store
+.idea
+*.swp
+
+_bash
+lang.log
+npm-debug.log
+
+node_modules/

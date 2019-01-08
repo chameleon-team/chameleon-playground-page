@@ -1,0 +1,17 @@
+{
+  "name": "cml-playground",
+  "version": "1.0.0",
+  "description": "A chameleon project",
+  "author": "",
+  "private": true,
+  "scripts": {},
+  "license": "MIT",
+  "dependencies": {
+    "@didi/chameleon": "^3.0.0",
+    "@didi/chameleon-api": "^1.0.3",
+    "@didi/chameleon-store": "^1.0.1",
+    "@didi/chameleon-ui": "^1.0.7",
+    "@didi/chameleon-ui-builtin": "^1.0.12",
+    "@didi/weex-bridge": "^1.0.0"
+  }
+}

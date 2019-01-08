@@ -1,0 +1,47 @@
+<script cml-type="interface">
+interface UtilsInterface {
+  openUrl(url: string): void;
+}
+
+</script>
+
+<script cml-type="web">
+
+class Method implements UtilsInterface {
+  openUrl(url) {
+    location.href = url;
+    return;
+  }
+}
+
+export default new Method();
+</script>
+
+<script cml-type="weex">
+var navigator = weex.requireModule('navigator');
+var event = weex.requireModule('event');
+class Method implements UtilsInterface {
+  openUrl(url) {
+    try {
+        event.openURL(url);
+    } catch (e) {
+        try {
+          navigator.push({url});
+        } catch (e) {}
+    }
+  }
+}
+
+export default new Method();
+</script>
+
+<script cml-type="wx">
+
+class Method implements UtilsInterface {
+  openUrl(url) {
+    return navigator.push({url});
+  }
+}
+
+export default new Method();
+</script>
