@@ -19,7 +19,15 @@
           </view>
           <view class="tool-item"  c-bind:tap="uidoc">
             <image src="{{iconModule}}" class="tool-icon"/>
-            <text class="tool-title">UI组件</text>
+            <text class="tool-title">UI内置组件</text>
+          </view>
+          <view class="tool-item"  c-bind:tap="uikz">
+            <image src="{{iconModule2}}" class="tool-icon"/>
+            <text class="tool-title">UI扩展组件</text>
+          </view>
+          <view class="tool-item" c-bind:tap="api">
+            <image src="{{iconApi}}" class="tool-icon"/>
+            <text  class="tool-title">API集成</text>
           </view>
         </view>
         <text  class="bottom-desc">适应不同环境的跨端整体解决方案</text>
@@ -37,6 +45,8 @@ class Index  {
     titleSrc: require('../../assets/images/label.png'),
     iconHelp: require('../../assets/images/help.png'),
     iconModule: require('../../assets/images/module.png'),
+    iconModule2: require('../../assets/images/ui.png'),
+    iconApi: require('../../assets/images/api.png'),
   }
   computed ={
     
@@ -49,10 +59,16 @@ class Index  {
       utils.openUrl('weex://go/scan');
     },
     help() {
-      utils.openUrl('http://docs.didialift.com/chameleon/');
+      utils.openUrl('https://beatles-chameleon.github.io/doc/');
     },
     uidoc() {
-      utils.openUrl('http://www.didiglobal.com?cml_addr=https://static.didialift.com/pinche/gift/chameleon-ui/weex/chameleon-ui_1dbbe9f5394d7c61d6f7.js');
+      utils.openUrl('https://api.didialift.com/proxy/static/pinche/gift/chameleon-ui-builtin/web/chameleon-ui-builtin.html?cml_addr=https://api.didialift.com/proxy/static/pinche/gift/chameleon-ui-builtin/weex/chameleon-ui-builtin.js#/');
+    },
+    api() {
+      utils.openUrl('https://api.didialift.com/proxy/static/pinche/gift/chameleon-api/web/open-chameleon-api.html?cml_addr=https://api.didialift.com/proxy/static/pinche/gift/chameleon-api/weex/open-chameleon-api_039a2e8061c17f54b15d.js#/pages/index/index');
+    },
+    uikz() {
+      utils.openUrl('https://api.didialift.com/proxy/static/pinche/gift/chameleon-ui/web/cml-ui.html?cml_addr=https://api.didialift.com/proxy/static/pinche/gift/chameleon-ui/weex/chameleon-ui.js');
     }
   }
   beforeCreate(res) {
