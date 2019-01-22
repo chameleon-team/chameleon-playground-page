@@ -14,7 +14,7 @@ cml.config.merge({
     webPath: 'https://api.chameleon.com/h5/index'
   },
   proxy: {
-    enable: true,
+    enable: false,
   },
   wx: {
     dev: {
