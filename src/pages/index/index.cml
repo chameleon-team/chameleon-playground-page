@@ -59,16 +59,16 @@ class Index  {
       utils.openUrl('weex://go/scan');
     },
     help() {
-      utils.openUrl('https://beatles-chameleon.github.io/doc/');
+      utils.openUrl('https://didi.github.io/chameleon/doc/');
     },
     uidoc() {
-      utils.openUrl('https://api.didialift.com/proxy/static/pinche/gift/chameleon-ui-builtin/web/chameleon-ui-builtin.html?cml_addr=https://api.didialift.com/proxy/static/pinche/gift/chameleon-ui-builtin/weex/chameleon-ui-builtin.js#/');
+      utils.openUrl('https://beatles-chameleon.github.io/chameleon-ui-builtin/dist/web/chameleon-ui-builtin.html?cml_addr=https%3A%2F%2Fbeatles-chameleon.github.io%2Fchameleon-ui-builtin%2Fdist%2Fweex%2Fchameleon-ui-builtin.js#/');
     },
     api() {
       utils.openUrl('https://api.didialift.com/proxy/static/pinche/gift/chameleon-api/web/open-chameleon-api.html?cml_addr=https://api.didialift.com/proxy/static/pinche/gift/chameleon-api/weex/open-chameleon-api_039a2e8061c17f54b15d.js#/pages/index/index');
     },
     uikz() {
-      utils.openUrl('https://api.didialift.com/proxy/static/pinche/gift/chameleon-ui/web/cml-ui.html?cml_addr=https://api.didialift.com/proxy/static/pinche/gift/chameleon-ui/weex/chameleon-ui.js');
+      utils.openUrl('https://beatles-chameleon.github.io/cml-ui/dist/web/cml-ui.html?cml_addr=https%3A%2F%2Fbeatles-chameleon.github.io%2Fcml-ui%2Fdist%2Fweex%2Fcml-ui.js#/');
     }
   }
   beforeCreate(res) {
