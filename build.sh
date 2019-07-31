@@ -1,5 +1,5 @@
 #!/bin/bash
-
+rm -rf ./dist/*
 cml build
 cp ./res/* ./dist/
 #scp -r ./dist/weex/* ./dist/web/* xiaoju@10.179.100.193:/home/xiaoju/webroot/

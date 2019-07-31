@@ -19,15 +19,7 @@
           </view>
           <view class="tool-item"  c-bind:tap="uidoc">
             <image src="{{iconModule}}" class="tool-icon"/>
-            <text class="tool-title">UI内置组件</text>
-          </view>
-          <view class="tool-item"  c-bind:tap="uikz">
-            <image src="{{iconModule2}}" class="tool-icon"/>
-            <text class="tool-title">UI扩展组件</text>
-          </view>
-          <view class="tool-item" c-bind:tap="api">
-            <image src="{{iconApi}}" class="tool-icon"/>
-            <text  class="tool-title">API集成</text>
+            <text class="tool-title">组件接口</text>
           </view>
         </view>
         <text  class="bottom-desc">适应不同环境的跨端整体解决方案</text>
@@ -62,7 +54,7 @@ class Index  {
       utils.openUrl('https://didi.github.io/chameleon/doc/');
     },
     uidoc() {
-      utils.openUrl('https://beatles-chameleon.github.io/chameleon-ui-builtin/dist/web/chameleon-ui-builtin.html?cml_addr=https%3A%2F%2Fbeatles-chameleon.github.io%2Fchameleon-ui-builtin%2Fdist%2Fweex%2Fchameleon-ui-builtin.js#/');
+      utils.openUrl('https://cmljs.org/cml-demo/dist/web/cml-demo.html?cml_addr=https%3A%2F%2Fcmljs.org%2Fcml-demo%2Fdist%2Fweex%2Fcml-demo.js#/');
     },
     api() {
       utils.openUrl('https://api.didialift.com/proxy/static/pinche/gift/chameleon-api/web/open-chameleon-api.html?cml_addr=https://api.didialift.com/proxy/static/pinche/gift/chameleon-api/weex/open-chameleon-api_039a2e8061c17f54b15d.js#/pages/index/index');
