@@ -10,3 +10,5 @@ npm-debug.log
 
 node_modules/
 dist/
+npm-shrinkwrap.json
+build.sh
